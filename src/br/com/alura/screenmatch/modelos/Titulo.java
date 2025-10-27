@@ -45,7 +45,7 @@ public class Titulo {
     }
 
     public void exibeFichaTecnica() {
-        System.out.println("Nome do filme: " + nome);
+        System.out.println("Titulo: " + nome);
         System.out.println("Ano de lançamento: " + anoDeLancamento);
     }
 
@@ -56,5 +56,9 @@ public class Titulo {
 
     public double pegaMedia() {
         return somaDasAvaliacoes / totalDeAvaliacoes;
+    }
+
+    public String mediaFormatada() {
+        return String.format("%.1f", pegaMedia());
     }
 }
