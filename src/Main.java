@@ -1,6 +1,9 @@
 import br.com.alura.screenmatch.calculos.CalculadoraDeTempo;
 import br.com.alura.screenmatch.modelos.Filme;
 import br.com.alura.screenmatch.modelos.Serie;
+import br.com.alura.screenmatch.modelos.Titulo;
+
+import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
@@ -61,5 +64,13 @@ public class Main {
         calculadora.inclui(theWalkingDead);
         System.out.println("O total em minutos para maratonar todos os titulos é de : " + calculadora.getTempoTotal());
         System.out.println("");
+
+        ArrayList<Titulo> listaDeTitulos = new ArrayList<>();
+        listaDeTitulos.add(primeiroFilme);
+        listaDeTitulos.add(segundoFilme);
+        listaDeTitulos.add(terceiroFilme);
+        listaDeTitulos.add(theWalkingDead);
+        System.out.println("Tamanho da lista: " + listaDeTitulos.size());
+
     }
 }
