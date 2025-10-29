@@ -8,6 +8,11 @@ public class Titulo {
     private int totalDeAvaliacoes;
     private int duracaoEmMinutos;
 
+    public Titulo(String nome, int anoDeLancamento) {
+        this.nome = nome;
+        this.anoDeLancamento = anoDeLancamento;
+    }
+
     public String getNome() {
         return nome;
     }
@@ -28,9 +33,6 @@ public class Titulo {
         return totalDeAvaliacoes;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
 
     public void setAnoDeLancamento(int anoDeLancamento) {
         this.anoDeLancamento = anoDeLancamento;
@@ -60,5 +62,10 @@ public class Titulo {
 
     public String mediaFormatada() {
         return String.format("%.1f", pegaMedia());
+    }
+
+    @Override
+    public String toString() {
+        return this.getNome();
     }
 }
